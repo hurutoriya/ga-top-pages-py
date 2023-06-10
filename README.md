@@ -34,7 +34,7 @@ This script assume
 1. `379` views: [AOJの「ITP I」40問をPythonで解いた](/posts/2020-08-04/)
 ```
 
-Example: How this result render in markdown.
+Example: How this result render in markdown. Make sure following link is broken since this is relative link for SSG.
 
 1. `3671` views: [Python で変数を挿入して SQL クエリを柔軟に構築する](/posts/2021-04-29/)
 1. `1375` views: [Twitter の検索システム、Earilybird の論文を読む](/posts/2023-04-29-0030/)
