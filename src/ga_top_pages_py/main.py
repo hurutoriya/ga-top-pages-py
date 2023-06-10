@@ -10,7 +10,9 @@ import frontmatter
 import argparse
 
 
-def get_top_pages_report(property_id: str, site_content_path: str, pages_root_url:str, top_n: int):
+def get_top_pages_report(
+    property_id: str, site_content_path: str, pages_root_url: str, top_n: int
+):
     """
     Show Top N page report with markdown format from one year ago based on
     Google Analytics result.
@@ -46,18 +48,20 @@ def get_top_pages_report(property_id: str, site_content_path: str, pages_root_ur
             view_cnt = row.metric_values[0].value
             page_path = row.dimension_values[0].value
             page_title = get_page_title(
-                page_path=page_path, site_content_path=site_content_path
+                site_content_path=site_content_path, page_path=page_path
             )
-            print(f"1. `{view_cnt}` views: [{page_title}]({pages_root_url + page_path})")
+            print(
+                f"1. `{view_cnt}` views: [{page_title}]({pages_root_url + page_path})"
+            )
 
 
-def get_page_title(page_path: str, site_content_path: str) -> str:
+def get_page_title(site_content_path: str, page_path: str) -> str:
     """
     Get page title in frontmatter
 
     Args:
-        page_path (str): page path to markdown file
         site_content_path (str): static site generator content root path
+        page_path (str): page path to markdown file
 
     Returns:
         str: markdown file path
@@ -84,7 +88,9 @@ if __name__ == "__main__":
         type=str,
         help="Path to site content in static site generator(e.g. Hugo)",
     )
-    parser.add_argument("-pages_root_url", type=str, help="pages_root_url e.g. https://shunyaueta.com")
+    parser.add_argument(
+        "-pages_root_url", type=str, help="pages_root_url e.g. https://shunyaueta.com"
+    )
     parser.add_argument("-top_n", type=int, help="Number of top pages to retrieve")
 
     args = parser.parse_args()
