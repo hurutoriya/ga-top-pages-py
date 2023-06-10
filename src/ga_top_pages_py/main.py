@@ -10,7 +10,7 @@ import frontmatter
 import argparse
 
 
-def get_top_pages_report(property_id: str, site_content_path: str, link_style:str, pages_root_url:str, top_n: int):
+def get_top_pages_report(property_id: str, site_content_path: str, pages_root_url:str, top_n: int):
     """
     Show Top N page report with markdown format from one year ago based on
     Google Analytics result.
@@ -18,7 +18,6 @@ def get_top_pages_report(property_id: str, site_content_path: str, link_style:st
     Args:
         property_id (str): Google Analytics(GA4) property_id
         site_content_path (str): static site generator content root path
-        link_style (str): Markdown link style option. support absolute URL or relative link for SSG.
         pages_root_url (str): pages root URL. e.g. https://shunyaueta.com to generate each page URL. Please remove / in end of URL if you have that.
         top_n (int): extract top N post based on aggregated result
     """
@@ -49,10 +48,7 @@ def get_top_pages_report(property_id: str, site_content_path: str, link_style:st
             page_title = get_page_title(
                 page_path=page_path, site_content_path=site_content_path
             )
-            if link_style=="url":
-                print(f"1. `{view_cnt}` views: [{page_title}]({pages_root_url + page_path})")
-            else:
-                print(f"1. `{view_cnt}` views: [{page_title}]({page_path})")
+            print(f"1. `{view_cnt}` views: [{page_title}]({pages_root_url + page_path})")
 
 
 def get_page_title(page_path: str, site_content_path: str) -> str:
@@ -88,7 +84,6 @@ if __name__ == "__main__":
         type=str,
         help="Path to site content in static site generator(e.g. Hugo)",
     )
-    parser.add_argument("-link_style", type=str, help="relative or url: URL link style")
     parser.add_argument("-pages_root_url", type=str, help="pages_root_url e.g. https://shunyaueta.com")
     parser.add_argument("-top_n", type=int, help="Number of top pages to retrieve")
 
@@ -97,7 +92,6 @@ if __name__ == "__main__":
     get_top_pages_report(
         property_id=args.property_id,
         site_content_path=args.site_content_path,
-        link_style=args.link_style,
         pages_root_url=args.pages_root_url,
         top_n=args.top_n,
     )
