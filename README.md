@@ -13,6 +13,8 @@ This script assume
 
 ## Show top page result
 
+Please replace `GOOGLE_APPLICATION_CREDENTIALS` and every options.
+
 ```shell
 > GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -top_n=15
 ## 直近一年間の人気記事 Top15
@@ -53,6 +55,8 @@ Example: How this result render in markdown. Make sure following link is broken 
 1. `379` views: [AOJ の「ITP I」40 問を Python で解いた](/posts/2020-08-04/)
 
 ## Copy result to clip board
+
+You can pipe the pbcopy
 
 ```shell
 GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -top_n=15 | pbcopy
