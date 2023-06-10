@@ -70,6 +70,7 @@ GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/mai
 
 ## Wish list
 
+- [ ] Remake Go based CLI tools: potability is very important for this tools.
 - [ ] Support absolute path lin option
 - [ ] Support specific date range option
 - [ ] Support HTML format option
