@@ -13,7 +13,13 @@ This script assume
 
 ## Show top page result
 
-Please replace `GOOGLE_APPLICATION_CREDENTIALS` and every options.
+This package use `Google Analytics Data API v1`.
+Please follow official docs to use this API.
+
+[API Quickstart  \|  Google Analytics Data API  \|  Google for Developers](https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries#python)
+
+Please replace `GOOGLE_APPLICATION_CREDENTIALS` and every options based on your expected result.
+Make sure you can modify Dimensions and Metrics based on your purpose.
 
 ```shell
 > GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -top_n=15
