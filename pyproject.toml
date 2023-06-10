@@ -1,0 +1,28 @@
+[project]
+name = "ga-top-pages-py"
+version = "0.1.0"
+description = "Generate top pages markdown style report based on Google Analytics(GA4) result for Static Site Generator"
+authors = [
+    { name = "Shunya Ueta", email = "hurutoriya@users.noreply.github.com" }
+]
+dependencies = [
+    "black~=23.3.0",
+    "ruff~=0.0.272",
+    "google-analytics-data~=0.16.2",
+    "python-frontmatter~=1.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.hatch.metadata]
+allow-direct-references = true
