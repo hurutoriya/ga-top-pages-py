@@ -24,7 +24,7 @@ Please replace `GOOGLE_APPLICATION_CREDENTIALS` and every options based on your 
 Make sure you can modify Dimensions and Metrics based on your purpose.
 
 ```shell
-> GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -link_style="url" -pages_root_url="https://shunyaueta.com" -top_n=15
+> GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -pages_root_url="https://shunyaueta.com" -top_n=15
 ## 直近一年間の人気記事 Top15
 
 1. `3671` views: [Pythonで変数を挿入してSQLクエリを柔軟に構築する](https://shunyaueta.com/posts/2021-04-29/)
@@ -69,7 +69,7 @@ Example: Following result is how this script's result render in markdown.
 You can pipe the pbcopy
 
 ```shell
-GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -link_style="url" -pages_root_url="https://shunyaueta.com" -top_n=15 | pbcopy
+GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/main.py -property_id="12345" -site_content_path="../hurutoriya.github.io/content" -pages_root_url="https://shunyaueta.com" -top_n=15 | pbcopy
 ```
 
 ## Wish list
