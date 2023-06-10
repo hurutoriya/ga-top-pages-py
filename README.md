@@ -4,12 +4,14 @@ Generate markdown style top pages report based on Google Analytics(GA4) result f
 
 ## Motivation
 
-Static Site Generator (SSG) is not support data aggregation feature.
+Static Site Generator (SSG) is not support data aggregation feature but we want to provide this feature even if we use SSG!
+
+## Environment
+
 This script assume
 
-- [Hugo](https://gohugo.io/) style' SSG structure
 - Installed [rye](https://github.com/mitsuhiko/rye) to manage Python environment
-- link is relative link style or URL style.
+- [Hugo](https://gohugo.io/) style' SSG structure
 
 ## Show top page result
 
