@@ -2,6 +2,8 @@
 
 Generate markdown style top pages report based on Google Analytics(GA4) result for Static Site Generator.
 
+Go version is available: [hurutoriya/go-ga-toppages](https://github.com/hurutoriya/go-ga-toppages)
+
 ## Motivation
 
 Static Site Generator (SSG) is not support data aggregation feature but we want to provide this feature even if we use SSG!
@@ -74,6 +76,5 @@ GOOGLE_APPLICATION_CREDENTIALS="xxx.json" rye run python src/ga_top_pages_py/mai
 
 ## Wish list
 
-- [ ] Remake Go based CLI tools: potability is very important for this tools.
 - [ ] Support specific date range option
 - [ ] Support HTML format option
